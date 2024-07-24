@@ -1,0 +1,228 @@
+@import url('./fonts.css');
+@import url('./variables.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body{
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+/* Navbar */
+
+.navbar{
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(253, 252, 160);
+    box-shadow: 0 0 5px black;
+    padding: 20px;
+}
+
+.hero{
+    padding: 0 20px;
+    font-size: 1.3rem;
+}
+
+.toggler{
+    display: none;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links>li{
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    font-size: large;
+}
+
+.side-bar{
+    z-index: 1;
+    display: none;
+    width: 40vw;
+    height: 150vh;
+    position: absolute;
+    background-color: black;
+    color: rgb(253, 252, 160);
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    transition: 1s ease;
+    padding: 80px;
+    justify-content: center;
+    /* animation-duration: .5s;
+    animation-iteration-count: 1; */
+}
+.side-links{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+}
+
+.side-links>li{
+    list-style: none;
+    cursor: pointer;
+    border: 1px solid rgb(253, 252, 160);
+    box-shadow: 0 0 4px rgb(253, 252, 160);
+    cursor: pointer;
+    padding: 4px 7px;
+    border-radius: 12px;
+}
+
+
+/* Form */
+
+.form-container{
+    display: flex;
+    /* transform: translate(-50%,-50%); */
+    align-items: center;
+    justify-content: center;
+    /* padding: 30px; */
+    margin: 60px 0;
+}
+
+.student-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.student-form>div{
+    width: 50vw;
+    display: flex;
+    /* flex-basis: 100%; */
+    flex-wrap: wrap ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.student-form input{
+    /* width: 100%; */
+    border: 1px solid rgb(2, 2, 2);
+    border-radius: 5px;
+    box-shadow: 0 0 3px black;
+    padding: 5px;
+}   
+.student-form button{
+    border: 1px solid ;
+    border-radius: 12px;
+    box-shadow: 0 0 5px black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Viewing */
+
+.box-name{
+    cursor: pointer;
+}
+
+.box{
+    
+    position: relative;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0 0 5px black;
+    border-radius: 12px;
+}
+
+.box b{
+    color: aqua;
+    text-shadow: 0 0 2px black;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+.box-student{
+    box-shadow: 0 0 5px black;
+    background-color: white;
+    position: relative;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.btns button{
+    background-color: rgb(253, 252, 160);
+    border: 1px solid white;
+    padding:0 7px;
+    color: black;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.box-student>button{
+    cursor: pointer;
+    position: absolute;
+    background-color: rgb(253, 252, 160);
+    border: 1px solid white;
+    padding:0 7px;
+    color: black;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btns{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+/* media queries */
+@media (max-width:800px) {
+    .student-form{
+        align-items: center;
+        width: 90vw;
+    }
+    .student-form>div{
+        width: 80%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .student-form input{
+        width: 100%;
+    }
+}
+
+@media (max-width:600px){
+    .nav-links{
+        display: none;
+    }
+    .toggler{
+        display: block;
+    }
+}
+
+@media (min-width:600px){
+    .side-bar{
+        display: none;
+    }
+}
